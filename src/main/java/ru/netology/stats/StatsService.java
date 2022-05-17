@@ -41,4 +41,30 @@ public class StatsService {
         }
         return minMonth + 1;
     }
+    public int belowAvms(int[] monthlySales) {
+        int avms = 0;
+        for (int monthlySale : monthlySales) {
+            avms += monthlySale;
+        }
+        int minMonth = 0;
+        for (int monthlySale : monthlySales) {
+            if (monthlySale < avms / monthlySales.length) {
+                minMonth++;
+            }
+        }
+        return minMonth;
+    }
+    public int aboveAvms(int[] monthlySales) {
+        int avms = 0;
+        for (int monthlySale : monthlySales) {
+            avms += monthlySale;
+        }
+        int minMonth = 0;
+        for (int monthlySale : monthlySales) {
+            if (monthlySale > avms / monthlySales.length) {
+                minMonth++;
+            }
+        }
+        return minMonth;
+    }
 }

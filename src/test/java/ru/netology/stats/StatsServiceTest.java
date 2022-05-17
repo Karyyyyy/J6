@@ -53,4 +53,28 @@ public class StatsServiceTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test
+    public void shouldFindBelowAvms() {
+        StatsService manager = new StatsService();
+
+        int[] monthlySales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
+        int actual = manager.belowAvms(monthlySales);
+        int expected = 5;
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldFindAboveAvms() {
+        StatsService manager = new StatsService();
+
+        int[] monthlySales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+
+        int actual = manager.aboveAvms(monthlySales);
+        int expected = 5;
+
+        Assert.assertEquals(expected, actual);
+    }
+
 }
