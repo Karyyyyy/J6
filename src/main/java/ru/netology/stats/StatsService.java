@@ -43,7 +43,7 @@ public class StatsService {
         int minMonth = 0;
         int avms = avms(monthlySales);
         for (int monthlySale : monthlySales) {
-            if (monthlySale < avms) {gi
+            if (monthlySale < avms) {
                 minMonth++;
             }
         }
